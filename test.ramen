@@ -1,0 +1,37 @@
+use stdio
+use stdarray
+use stdvector
+use "a.hpp"
+
+define YO \
+(54 + 32)\
+
+//gli array possono andare a fanculo con calma e rispetto
+type i32 iblob[32];
+
+define ABS((a)) ((a) > 0) ? (a) : -(a)
+
+i32 main(i32 argc, char** argv)
+{
+    //i template hanno una sintassi un po strana pero funzionano quindi sono contento
+    template<name a, name b>//commento a sorpresa perche i template sono cio che io odio piu di ogni altra cosa
+    //i char sono fatti apposta per essere piu' chad
+    char a = 'b';
+    std::array<i32, 4> b;
+    std::vector<i32> b(12, 0);
+    a <<= b;
+    //^^^ mi ha fatto bestemmiare troppe volte
+
+    //viva i pointer
+    *a = b;
+
+    //la moltiplicazione funziona (?)
+    b = b * b;
+
+    char b = '\"' ; //questa non e' una stringa e' un char ma piu chad 
+
+    //i commenti non esistono 
+    std::cout << "Il mio linguaggio non e' stupido quindi non cambiera questo i32 in int" << YO << std::endl;
+    std::cout << "a + b = c";
+    std::cout << "questo string e' un singolo token perche il mio linguaggio ignora cio' che e' scritto all'interno delle stringhe" << std::endl;
+}
