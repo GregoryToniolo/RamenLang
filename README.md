@@ -3,6 +3,9 @@
 
 A very shitty and probably not memory safe transpiler menat for sceintific and mathematical applications that translates my custom syntax to c++
 
+## Warning
+This is just syntactic sugar for c++ you should know how to code c++ before using the ramen transpiler
+
 ## FAQ
 
 #### Why do my arrays and templates have weird spacing?
