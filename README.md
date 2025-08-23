@@ -12,7 +12,7 @@ They just do. be happy that your code even manages to compile
 Same as before if it works it works. if you have an issue shoot me an email.
 
 
-##dependencies
+## Dependencies
 
 make, a c++ compiler
 
