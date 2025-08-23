@@ -227,8 +227,6 @@ void printTokens(std::vector<Token>& tokens, std::ofstream& file)
 
     for (int i = 0; i < tokens.size(); i++)
     {
-        std::cout << tokens[i].tokenString << '\n';
-
         if (tokens[i].type == tokenType::LINE_COMMENT && i == 0)
         {
             newLine = false;
