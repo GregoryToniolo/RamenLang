@@ -8,7 +8,7 @@ dbuild: $(main) $(output)
 	clang++ $(main) -std=c++20 -Wall -Werror -v -g -fsanitize=address -o $(output)
 
 build: $(main) $(output)
-	clang++ $(main) -std=c++20 -Wall -Werror -v -g -o $(output)
+	clang++ $(main) -std=c++20 -Wall -Werror -v -o $(output)
 
 run: $(output) $(test)
 	./$(output) $(test)
