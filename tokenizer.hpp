@@ -21,7 +21,7 @@ enum class tokenType
     SWITCH, IF, ELSE, ELSE_IF, CASE, DEFAULT, CONTINUE, BREAK, WHILE, FOR, RETURN, TRUE, FALSE,
     //delimiters
     LEFT_CURLY_BRACKET, RIGHT_CURLY_BRACKET, LEFT_SQUARE_BRACKET, RIGHT_SQUARE_BRACKET, LEFT_PARENTHESIS, RIGHT_PARENTHESIS, RIGHT_ANGLED_BRACKET, LEFT_ANGLED_BRACKET, SEMICOLON, COLON, DOUBLE_COLON, PERIOD, COMMA, APOSTROPHE, QUOTAION_MARK,
-    EXCLAMATION_MARK, BACK_SLASH, HASHTAG, QUESTION_MARK, POINTER_ELEMENT,
+    EXCLAMATION_MARK, BACK_SLASH, HASHTAG, QUESTION_MARK, POINTER_ELEMENT, COMMENT_START, COMMENT_END,
     //operators
     BITSHIFT_LEFT, BITSHIFT_RIGHT, BITWISE_AND, BITWISE_OR, BITWISE_XOR, BITWISE_NOT, PLUS, MINUS, FORWARD_SLASH, ASTERISK, PERCENT_SIGN, LOGICAL_AND, LOGICAL_OR, LOGICAL_NOT, EQUAL_SIGN, LOGICAL_EQUALS, LARGER_OR_EQUAL, SMALLER_OR_EQUAL, 
     //other token types
@@ -104,7 +104,6 @@ bool isValidOperator(const char& first, const char& second)
         case '+':
         case '&':
         case '|':
-        case '/':
         case '=':
         case '<':
         case '>':
@@ -127,8 +126,15 @@ bool isValidOperator(const char& first, const char& second)
         case '!':
         case '~':
         case '^':
-        case '*':
         return second == '=';
+        break;
+
+        case '/':
+        return second == first || second == '=' || second == '*';
+        break;
+
+        case '*':
+        return second == '/' || second == '=';
         break;
     }
 

@@ -20,6 +20,9 @@ int main (int argc, char **argv)
 
 	*a = b ;
 
+		
+	
+	
 	b = b *b ;
 
 	char b = '\"' ;

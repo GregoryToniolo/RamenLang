@@ -92,6 +92,8 @@ tokenType type(const Token& token)
     if(token.tokenString == ">=") return tokenType::LARGER_OR_EQUAL;
     if(token.tokenString == "<=") return tokenType::SMALLER_OR_EQUAL;
     if(token.tokenString == "->") return tokenType::POINTER_ELEMENT;
+    if(token.tokenString == "/*") return tokenType::COMMENT_START;
+    if(token.tokenString == "*/") return tokenType::COMMENT_END;
 
     return tokenType::GENERIC;
 }
@@ -225,9 +227,29 @@ void printTokens(std::vector<Token>& tokens, std::ofstream& file)
         indentation++;
     }
 
+    static bool isComment = false;
+
     for (int i = 0; i < tokens.size(); i++)
     {
-        if (tokens[i].type == tokenType::LINE_COMMENT && i == 0)
+
+        if (tokens[i].type == tokenType::COMMENT_END)
+        {
+            isComment = false;
+            newLine = true;
+            continue;
+        }
+        else if (tokens[i].type == tokenType::COMMENT_START && i == 0)
+        {
+            isComment = true;
+            newLine = false;
+            continue;
+        }
+        else if (tokens[i].type == tokenType::COMMENT_START)
+        {
+            isComment = true;
+            continue;
+        }
+        else if (tokens[i].type == tokenType::LINE_COMMENT && i == 0)
         {
             newLine = false;
             break;
@@ -235,6 +257,11 @@ void printTokens(std::vector<Token>& tokens, std::ofstream& file)
         else if (tokens[i].type == tokenType::LINE_COMMENT)
         {
             break;
+        }
+
+        if (isComment)
+        {
+            continue;
         }
 
         if (static_cast<int>(tokens[i].type) <= static_cast<int>(tokenType::FALSE))

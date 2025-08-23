@@ -18,13 +18,17 @@ i32 main(i32 argc, char** argv)
     //i char sono fatti apposta per essere piu' chad
     char a = 'b';
     std::array<i32, 4> b;
-    std::vector<i32> b(12, 0);
-    a <<= b;
+    std::vector<i32> b(12, 0);/* comment here
+    and here*/a <<= b;
     //^^^ mi ha fatto bestemmiare troppe volte
 
     //viva i pointer
     *a = b;
 
+/*
+ * i32
+ *
+ */ 
     //la moltiplicazione funziona (?)
     b = b * b;
 
