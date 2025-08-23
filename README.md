@@ -19,7 +19,10 @@ make, a c++ compiler
 ## Installation
 Linux / wsl
 ```bash
-  git clone https://github.com/GregoryToniolo/RamenLang && cd RamenLang && make build && sudo cp ramen /usr/bin 
+  git clone https://github.com/GregoryToniolo/RamenLang && cd RamenLang && clang++ main.cpp -std=c++20 -o ramen && make build && sudo cp ramen /usr/bin 
+```
+```bash
+  git clone https://github.com/GregoryToniolo/RamenLang && cd RamenLang && gcc main.cpp -std=c++20 -o ramen && make build && sudo cp ramen /usr/bin 
 ```
 ## Usage
 
