@@ -42,3 +42,4 @@ The order of the keywords is very important!
 ## Language syntax
 
 ramen language syntax can be found in ramenKeywords in parser.hpp with c++ equivalents in cppKeywords
+i have also provided an example in test.ramen
