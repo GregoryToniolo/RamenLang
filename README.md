@@ -23,7 +23,8 @@ clang
 ```bash
   git clone https://github.com/GregoryToniolo/RamenLang && cd RamenLang && clang++ main.cpp -std=c++20 -o ramen && make build && sudo cp ramen /usr/bin 
 ```
-if using gcc go into Makefile and change build to use gcc instead of clang++ after cloning
+if you are using gcc go into Makefile and change build to use gcc instead of clang++ after cloning
+
 gcc
 ```bash
   git clone https://github.com/GregoryToniolo/RamenLang && cd RamenLang && gcc main.cpp -std=c++20 -o ramen && make build && sudo cp ramen /usr/bin 
