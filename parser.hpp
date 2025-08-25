@@ -19,7 +19,7 @@ const std::vector<std::string> cppKeywords = {
     //macros
     "#include", "#define", "#undef", "#ifndef", "#ifdef", "#if", "#endif", "#pragma",
     //libraries
-    "<iostream>", "<algorithm>", "<fstream>", "<vector>", "<exception>", "<memory>", "<array>", "<string>",
+    "<iostream>", "<algorithm>", "<fstream>", "<vector>", "<string>", "<exception>", "<memory>", "<array>", 
     //loops and logic
     "switch", "if", "else", "else if", "case", "default", "continue", "break", "while", "for", "return", "true", "false",
 };
