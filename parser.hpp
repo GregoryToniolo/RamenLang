@@ -37,7 +37,7 @@ const std::vector<std::string> ramenKeywords = {
     //macros
     "use", "define", "undefine", "ifnotdef", "ifdef", "if_P", "endif", "pragma",
     //libraries
-    "stdio", "stdalg", "stdfile", "stdvector", "stdexcept", "stdmem", "stdarray", "stdstring",
+    "stdio", "stdalg", "stdfile", "stdvector", "stdstring", "stdexcept", "stdmem", "stdarray", 
     //loops and logic
     "match", "if", "else", "elif", "case", "default", "continue", "end", "while", "for", "return", "true", "false",
 };
