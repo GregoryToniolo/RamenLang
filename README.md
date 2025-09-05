@@ -12,7 +12,7 @@ This is just syntactic sugar for c++ you should know how to code c++ before usin
 They just do. be happy that your code even manages to compile
 
 #### Why do my multiplications have weird spacing
-Same as before if it works it works. if you have an issue shoot me an email.
+Same as before if it works it works. if you have an issue of find a bug just fix it.
 
 
 ## Dependencies
